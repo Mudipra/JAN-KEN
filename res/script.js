@@ -14,6 +14,16 @@ let batu = document.getElementById("batu");
 let gunting = document.getElementById("gunting");
 let kertas = document.getElementById("kertas");
 
+if (localStorage.getItem("skorKen")) {
+    skorKen = localStorage.getItem("skorKen");
+    displaySkorKen.innerHTML = skorKen;
+}
+
+if (localStorage.getItem("skorPlayer")) {
+    skorPlayer = localStorage.getItem("skorPlayer");
+    displaySkorPlayer.innerHTML = skorPlayer;
+}
+
 starGame.addEventListener("click", () => {
     splashScreen.style.top = "-120vh";
     splashScreen.style.transtion = ".75s";
@@ -23,11 +33,11 @@ batu.addEventListener("click", () => {
     janken(0);
 });
 
-gunting.addEventListener("gunting", () => {
+gunting.addEventListener("click", () => {
     janken(1);
 });
 
-kertas.addEventListener("kertas", () => {
+kertas.addEventListener("click", () => {
     janken(2);
 });
 
@@ -37,6 +47,7 @@ reset.addEventListener("click", () => {
         skorPlayer = 0;
         displaySkorKen.innerHTML = skorKen;
         displaySkorPlayer.innerHTML = skorPlayer;
+        localStorage.clear();
     };
 });
 
@@ -94,11 +105,13 @@ function result(who) {
     switch (who) {
         case "ken":
             skorKen++;
+            localStorage.setItem("skorKen", skorKen);
             displaySkorKen.innerHTML = skorKen;
             console.log("Ninja Ken Menang");
             break;
         case "player":
             skorPlayer++;
+            localStorage.setItem("skorPlayer", skorPlayer);
             displaySkorPlayer.innerHTML = skorKen;
             console.log("Anda Menang");
             break;

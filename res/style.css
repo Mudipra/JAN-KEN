@@ -1,4 +1,4 @@
-@keyframes ninjawinggle {
+@keyframes ninjawiggle {
 
     0%,
     100% {
@@ -79,7 +79,7 @@ button {
 }
 
 .splash .center button:active {
-    transform: translateX(8px);
+    transform: translateY(8px);
     box-shadow: none;
 }
 
@@ -118,7 +118,7 @@ button {
     top: 50%;
     left: 0;
     z-index: 200;
-    transform: translateX(-50%);
+    transform: translateY(-50%);
     padding: 30px 15px;
     background: #7879b9;
     color: #fff;
