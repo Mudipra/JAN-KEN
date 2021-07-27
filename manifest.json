@@ -3,7 +3,7 @@
     "short_name": "Jan-Ken",
     "description": "Game Suit Jepang",
     "lang": "id-ID",
-    "start_url": "http://mudipra.github.io/Jan-Ken-Game/?utm_source=homescreen&utm_medium=shortcut",
+    "start_url": "https://mudipra.github.io/Jan-Ken-Game/?utm_source=homescreen&utm_medium=shortcut",
     "display": "standalone",
     "background_color": "#eceff1",
     "theme_color": "#eceff1",
